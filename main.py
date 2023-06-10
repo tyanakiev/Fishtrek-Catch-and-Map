@@ -28,7 +28,7 @@ def get_db(request: Request):
 
 @app.get("/")
 def index():
-    return {"message":"Welcome"}
+    return {"index": {"message": "Welcome", "title": "Fishtrek Catch and Map"}}
 
 
 @app.post("/users/", response_model=schemas.User)
@@ -55,7 +55,7 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
 
 @app.post("/users/{user_id}/fish/", response_model=schemas.Fish)
 def create_item_for_user(
-    user_id: int, fish: schemas.FishCreate, db: Session = Depends(get_db)
+        user_id: int, fish: schemas.FishCreate, db: Session = Depends(get_db)
 ):
     return crud.create_user_fish(db=db, fish=fish, user_id=user_id)
 
