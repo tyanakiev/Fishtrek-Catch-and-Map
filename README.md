@@ -16,10 +16,10 @@ Fishtrek is a web application built with React and FastAPI that allows users to 
 1. Clone the repository: `git clone https://github.com/your-username/fishtrek.git`
 2. Navigate to the project directory: `cd fishtrek`
 3. Install the dependencies for React frontend: `cd frontend && npm install`
-4. Install the dependencies for FastAPI backend: `cd ../backend && pip install -r requirements.txt`
-5. Configure the database and authentication settings in `backend/config.py`.
+4. Install the dependencies for FastAPI backend: `cd .. && pip install -r requirements.txt`
+5. Configure the database and authentication settings in `database.py`.
 6. Start the React development server: `cd ../frontend && npm start`
-7. Start the FastAPI backend server: `cd ../backend && uvicorn main:app --reload`
+7. Start the FastAPI backend server: `cd .. && uvicorn main:app --reload`
 
 Note: Ensure you have Node.js, npm, and Python installed on your system.
 
