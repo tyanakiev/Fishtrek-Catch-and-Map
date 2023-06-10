@@ -32,5 +32,5 @@ def create_user_fish(db: Session, fish: schemas.FishCreate, user_id: int):
     db_fish = models.Fish(**fish.dict(), owner_id=user_id)
     db.add(db_fish)
     db.commit()
-    db  .refresh(db_fish)
+    db.refresh(db_fish)
     return db_fish
